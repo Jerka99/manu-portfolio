@@ -183,11 +183,11 @@ section {
 }
 
 .parallax-background.base {
-  background-image: url('/images/concert/concert11.jpg');
+    background: url("/images/concert/concert11.jpg") no-repeat center center/cover fixed;
 }
 
 .parallax-background.overlay {
-  background-image: url('/images/concert/concert12.jpg');
+    background: url("/images/concert/12.jpg") no-repeat center center/cover fixed;
   opacity: 1;
 }
 
