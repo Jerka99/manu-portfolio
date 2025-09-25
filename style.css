@@ -115,7 +115,7 @@ section {
 /* Parallax section */
 .parallax-content {
     width: 100%;
-    padding: 33vh 0;
+    padding: 15vh 0;
     height: auto;
     display: flex;
     }
@@ -183,11 +183,11 @@ section {
 }
 
 .parallax-background.base {
-  background-image: url('images/concert/concert11.jpg');
+  background-image: url('/images/concert/concert11.jpg');
 }
 
 .parallax-background.overlay {
-  background-image: url('images/concert/concert12.jpg');
+  background-image: url('/images/concert/concert12.jpg');
   opacity: 1;
 }
 
