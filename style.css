@@ -166,7 +166,6 @@ section {
 
 .parallax-section {
   position: relative;
-  height: 700vw;
   overflow: hidden;
   max-width: none;
 }
@@ -174,7 +173,6 @@ section {
 
 .parallax-background {
   position: sticky;
-  height: 350vw;
   top: 0;
   left: 0;
   width: 100%;
@@ -508,7 +506,10 @@ section {
     z-index: 2100;
 }
 
-
+media only screen and (max-width: 768px) {
+     .elementor-widget-wrap.elementor-element-populated.lazyloaded {
+            background-attachment: fixed !important;
+                 }
 
 @media (max-width: 750px) {
     .hero-content {
