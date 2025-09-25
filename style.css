@@ -166,6 +166,7 @@ section {
 
 .parallax-section {
   position: relative;
+  height: 700vw;
   overflow: hidden;
   max-width: none;
 }
@@ -173,6 +174,7 @@ section {
 
 .parallax-background {
   position: sticky;
+  height: 350vw;
   top: 0;
   left: 0;
   width: 100%;
