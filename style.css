@@ -179,15 +179,16 @@ section {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  background-repeat: no-repeat;
 
 }
 
 .parallax-background.base {
-    background: url("/images/concert/concert11.jpg") no-repeat center center/cover fixed;
+  background-image: url('images/concert/concert11.jpg');
 }
 
 .parallax-background.overlay {
-    background: url("/images/concert/12.jpg") no-repeat center center/cover fixed;
+  background-image: url('images/concert/concert12.jpg');
   opacity: 1;
 }
 
