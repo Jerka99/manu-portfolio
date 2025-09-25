@@ -1,0 +1,527 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+
+/* Header */
+/* Hero Section */
+/* Hero Section Full-width, Responsive */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* full viewport height */
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* center horizontally */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* keeps aspect ratio, fills container */
+}
+
+.hero-content {
+     position: absolute;
+     top: 0;
+     left: 0;
+     z-index: 2;
+ }
+
+
+.header-title {
+    width: 33vw;
+    font-size: 21px;
+    margin: 3vw;
+    opacity: 0.5;
+}
+
+
+/* Whole page background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #fff;
+    background: linear-gradient(135deg, #111 0%, #1a1a1a 50%, #222 100%);
+}
+
+
+
+
+
+
+
+
+
+/* Sections */
+section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto 300px auto;
+}
+
+
+/* Gallery Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.media {
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    background: #000;
+}
+
+.media img,
+.media video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.media:hover img,
+.media:hover video {
+    transform: scale(1.05);
+}
+
+/* Large fullscreen images */
+.large-images {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.large-image img {
+    width: 100%;
+    max-height: 80vh;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Parallax section */
+.parallax-content {
+    width: 100%;
+    padding: 33vh 0;
+    height: auto;
+    display: flex;
+    }
+
+.parallax-content .media {
+    width: 45vw;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0px 0px 38px rgb(0 0 0 / 58%);
+}
+
+.parallax-content .media {
+    width: 45vw;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0px 0px 38px rgb(0 0 0 / 58%);
+}
+
+.parallax-background.base .parallax-content:nth-child(3) .media{
+    width: 65vw;
+ }
+
+.parallax-background.overlay .parallax-content:nth-child(1) .media{
+    width: 65vw;
+}
+
+.parallax-background.overlay .parallax-content:nth-child(2) .media{
+    width: 65vw;
+}
+
+.parallax-background.overlay .parallax-content:nth-child(3) .media{
+    width: 65vw;
+}
+
+
+.parallax-content.left {
+    padding-left: 45px;
+    justify-content: flex-start; /* stick to left */
+}
+
+.parallax-content.right {
+    padding-right: 45px;
+    justify-content: flex-end; /* stick to right */
+}
+
+
+.parallax-section {
+  position: relative;
+  overflow: hidden;
+  max-width: none;
+}
+
+
+.parallax-background {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+}
+
+.parallax-background.base {
+  background-image: url('images/concert/concert11.jpg');
+}
+
+.parallax-background.overlay {
+  background-image: url('images/concert/concert12.jpg');
+  opacity: 1;
+}
+
+.parallax-background.sea {
+  background-image: url('images/parallax/vern-6.jpg');
+}
+
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: 5% auto;
+    display: flex;
+    justify-content: center;
+    max-width: 90%;
+    max-height: 80%;
+}
+
+.modal img,
+.modal video {
+    width: 60vw;        /* fixed width for all */
+    height: auto;       /* keep proportions */
+    max-height: 80vh;   /* don't get taller than viewport */
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain; /* ensures it scales neatly */
+}
+
+/* Modal overlay */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Navigation buttons */
+.nav {
+    position: fixed; /* fixed so always stays in same place */
+    top: 50%;        /* vertically centered */
+    transform: translateY(-50%);
+    font-size: 50px;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+    z-index: 2100;
+    padding: 0 15px;
+    transition: 0.3s;
+}
+
+.nav.left {
+    left: 20px;
+}
+
+.nav.right {
+    right: 20px;
+}
+
+/* Optional hover effect */
+.nav:hover {
+    color: #ddd;
+}
+
+/* Close button */
+.close {
+    position: fixed;  /* fixed so always visible */
+    top: 30px;        /* a bit lower from top */
+    right: 30px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 2100;
+    transition: 0.3s;
+}
+
+.close:hover {
+    color: #bbb;
+}
+
+
+/* Fade-in animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Sliding Images */
+.sliding-images {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 4rem 2rem;
+}
+
+.slide {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* default for right→left */
+    overflow: hidden;
+}
+
+.slide-left {
+    justify-content: flex-end; /* for left→right */
+}
+
+.slide img {
+    width: 66vw; /* 2/3 of viewport width */
+    max-width: 1200px;
+    border-radius: 10px;
+    transform: translateX(0);
+    transition: transform 1s ease-out, opacity 1s ease-out;
+    opacity: 0;
+}
+
+/* Initial positions */
+.slide-right img {
+    transform: translateX(100%);
+}
+
+.slide-left img {
+    transform: translateX(-100%);
+}
+
+/* Slide-in visible state */
+.slide-right.visible img,
+.slide-left.visible img {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+
+
+
+/* Scattered gallery */
+.scattered-gallery {
+    position: relative;
+    height: 120vh;
+    padding: 2rem;
+    overflow: hidden
+}
+
+.scattered-image {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(30px) rotate(0deg);
+    transition: transform 0.6s ease, opacity 0.6s ease, z-index 0s;
+}
+
+.scattered-image img {
+    width: clamp(150px, 33vw, 300px); /* scales between 150px and 300px */
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* Fade-in on scroll */
+.scattered-image.visible {
+    opacity: 1;
+}
+
+/* Active clicked image */
+.scattered-image.active {
+    z-index: 999;
+}
+
+.scattered-image.active img {
+    width: clamp(250px, 35vw, 400px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+    cursor: pointer;
+}
+
+
+/* Modal Styles */
+.scattered-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+}
+
+.scattered-modal .modal-image {
+    max-width: 90vw;
+    max-height: 80vh;
+    border-radius: 10px;
+}
+
+.scattered-modal .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 3100;
+}
+
+.scattered-modal .nav {
+    position: absolute;
+    top: 50%;
+    font-size: 50px;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+    z-index: 3100;
+    transform: translateY(-50%);
+}
+
+.scattered-modal .nav.left { left: 20px; }
+.scattered-modal .nav.right { right: 20px; }
+
+
+
+/* Floating images */
+.floating-image {
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    position: absolute;
+}
+
+/* Positions */
+.top-left {
+    top: 20px;
+    left: 20px;
+}
+
+.bottom-right {
+    bottom: 20px;
+    right: 20px;
+}
+
+@media (max-width: 500px) {
+    .top-left {
+        top: 10px;
+        left: 10px;
+    }
+    .bottom-right {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .floating-image {
+        width: 150px; /* smaller on mobile */
+    }
+}
+
+
+
+
+
+/* Fullscreen black viewer */
+.fullscreen-viewer {
+    display: none; /* hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto; /* allow scrolling if image is tall */
+    padding: 2rem;
+}
+
+.fullscreen-viewer img {
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+}
+
+/* Close button */
+.viewer-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 2100;
+}
+
+
+
+@media (max-width: 750px) {
+    .hero-content {
+        position: absolute;
+        top: 32%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+        border-radius: 8px;
+        padding: 1rem;
+    }
+
+    .modal img,
+    .modal video {
+        width:100vw;
+        border-radius: 10px;
+    }
+}
