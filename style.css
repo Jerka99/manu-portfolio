@@ -120,49 +120,39 @@ section {
     display: flex;
     }
 
+/* Default: large screens (2000px and above) */
 .parallax-content .media {
-    width: 45vw;
+    width: 600px;
     height: auto;
     display: block;
     border-radius: 8px;
     box-shadow: 0px 0px 38px rgb(0 0 0 / 58%);
 }
 
-.parallax-content .media {
-    width: 45vw;
-    height: auto;
-    display: block;
-    border-radius: 8px;
-    box-shadow: 0px 0px 38px rgb(0 0 0 / 58%);
+.color-fade-parallax .parallax-content:nth-child(4) .media,
+.color-fade-parallax .parallax-content:nth-child(5) .media,
+.color-fade-parallax .parallax-content:nth-child(6) .media,
+.color-fade-parallax .parallax-content:nth-child(7) .media {
+    width: 900px;
 }
 
-.parallax-background.base .parallax-content:nth-child(3) .media{
-    width: 65vw;
- }
-
-.parallax-background.overlay .parallax-content:nth-child(1) .media{
-    width: 65vw;
-}
-
-.parallax-background.overlay .parallax-content:nth-child(2) .media{
-    width: 65vw;
-}
-
-.parallax-background.overlay .parallax-content:nth-child(3) .media{
-    width: 65vw;
-}
+/* Smaller screens */
 
 
 .parallax-content.left {
-    padding-left: 45px;
+    padding-left: 80px;
     justify-content: flex-start; /* stick to left */
 }
 
 .parallax-content.right {
-    padding-right: 45px;
+    padding-right: 80px;
     justify-content: flex-end; /* stick to right */
 }
 
+section.color-fade-parallax {
+    padding: 0;
+    max-width: none;
+}
 
 .parallax-section {
   position: relative;
@@ -188,6 +178,7 @@ section {
   object-fit: cover;
   position: absolute;
   top: 0; left: 0;
+  will-change: opacity, transform, mask-image, -webkit-mask-image;
 }
 
 .img-base {
@@ -197,8 +188,15 @@ section {
 
 .img-color {
   z-index: 2;
-  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-  transition: clip-path 0.1s linear; /* smooths the line */
+  opacity: 1;
+}
+
+.img-color::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, black var(--reveal, 0%), transparent 100%);
+  pointer-events: none;
 }
 
 
@@ -543,12 +541,7 @@ height:400px;
     z-index: 2100;
 }
 
-media only screen and (max-width: 768px) {
-     .elementor-widget-wrap.elementor-element-populated.lazyloaded {
-            background-attachment: fixed !important;
-                 }
-
-@media (max-width: 750px) {
+@media (max-width: 768px) {
     .hero-content {
         position: absolute;
         top: 32%;
@@ -559,6 +552,32 @@ media only screen and (max-width: 768px) {
         border-radius: 8px;
         padding: 1rem;
     }
+.parallax-content.right {
+     padding-right:unset;
+     justify-content: center;
+}
+
+.parallax-content.left {
+     padding-left:unset;
+     justify-content: center;
+}
+
+.parallax-content {
+    width: 100%;
+    padding: 15vh 0;
+    height: auto;
+    display: flex
+;
+}
+         .parallax-content .media {
+             width: 90vw; /* make responsive on mobile */
+           }
+           .color-fade-parallax .parallax-content:nth-child(4) .media,
+           .color-fade-parallax .parallax-content:nth-child(5) .media,
+           .color-fade-parallax .parallax-content:nth-child(6) .media,
+           .color-fade-parallax .parallax-content:nth-child(7) .media {
+             width: 90vw;
+           }
 
     .modal img,
     .modal video {
@@ -566,3 +585,28 @@ media only screen and (max-width: 768px) {
         border-radius: 10px;
     }
 }
+    @media (max-width: 1600px) {
+       .parallax-content .media {
+         width: 400px;
+       }
+       .color-fade-parallax .parallax-content:nth-child(4) .media,
+       .color-fade-parallax .parallax-content:nth-child(5) .media,
+       .color-fade-parallax .parallax-content:nth-child(6) .media,
+       .color-fade-parallax .parallax-content:nth-child(7) .media {
+         width: 500px;
+       }
+     }
+
+     @media (max-width: 1200px) {
+       .parallax-content .media {
+         width: 400px;
+       }
+       .color-fade-parallax .parallax-content:nth-child(4) .media,
+       .color-fade-parallax .parallax-content:nth-child(5) .media,
+       .color-fade-parallax .parallax-content:nth-child(6) .media,
+       .color-fade-parallax .parallax-content:nth-child(7) .media {
+         width: 600px;
+       }
+     }
+
+
