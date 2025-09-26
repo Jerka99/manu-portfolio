@@ -169,64 +169,42 @@ section {
   overflow: hidden;
   max-width: none;
 }
-
-.parallax-fade {
+.color-fade-parallax {
   position: relative;
-  height: 300vh; /* long scroll */
 }
 
-.parallax-bg {
+.image-wrapper {
   position: sticky;
   top: 0;
-  height: 100vh; /* full screen */
+  width: 100%;
+  height: 100vh;
   overflow: hidden;
 }
 
-.parallax-bg img {
+.img-base, .img-color {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   position: absolute;
   top: 0; left: 0;
-  width: 100%;
-  height: 120%; /* a bit bigger for parallax */
-  object-fit: cover;
 }
 
-.bg-base {
+.img-base {
   filter: grayscale(100%);
   z-index: 1;
 }
 
-.bg-color {
-  opacity: 0;
+.img-color {
   z-index: 2;
-  transition: opacity 0.1s linear;
-}
-
-.parallax-content {
-  position: relative;
-  z-index: 3;
-  color: white;
-  text-align: center;
-  padding-top: 50vh;
-  font-size: 2rem;
-}
-
-.parallax-bg img {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100vh; /* full viewport */
-  object-fit: cover;
-}
-
-.bg-base {
-  filter: grayscale(100%);
-  z-index: 1;
-}
-
-.bg-color {
+  mask-image: linear-gradient(to top, black 0%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, black 0%, transparent 100%);
   opacity: 0;
-  z-index: 2;
-  transition: opacity 0.1s linear;
+}
+
+.section-content {
+z-index: 5;
+position: relative;
+height:400px;
 }
 
 .parallax-background {
