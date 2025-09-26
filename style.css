@@ -188,7 +188,6 @@ section {
   object-fit: cover;
   position: absolute;
   top: 0; left: 0;
-  will-change: opacity, transform, mask-image, -webkit-mask-image;
 }
 
 .img-base {
@@ -198,15 +197,8 @@ section {
 
 .img-color {
   z-index: 2;
-  opacity: 1;
-}
-
-.img-color::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, black var(--reveal, 0%), transparent 100%);
-  pointer-events: none;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  transition: clip-path 0.1s linear; /* smooths the line */
 }
 
 
