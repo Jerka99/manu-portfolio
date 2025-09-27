@@ -63,7 +63,7 @@ body {
   z-index: 1000;
   padding: 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -409,7 +409,7 @@ height:400px;
     position: fixed;
     top: 30px;
     right: 30px;
-    font-size: 40px;
+    font-size: 60px;
     color: #fff;
     cursor: pointer;
     z-index: 2100;
@@ -675,11 +675,21 @@ height:400px;
 }
 
 @media (max-width: 768px) {
+
+.portfolio-nav {
+    justify-content: flex-end;
+}
+
+.close {
+    position: fixed;
+    font-size: 40px;
+}
+
   .portfolio-nav ul {
     display: none;
     flex-direction: column;
     gap: 15px;
-    background: rgb(0 0 0 / 35%);
+    background: rgb(0 0 0 / 65%);
     position: absolute;
     top: 100%;
     right: 0;

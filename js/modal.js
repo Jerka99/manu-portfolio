@@ -38,6 +38,7 @@ function showModal(index) {
     }
 
     modal.style.display = "flex";
+    document.body.style.overflow = "hidden";
 }
 
 function showPrev() {
@@ -63,6 +64,7 @@ nextBtn.addEventListener("click", (e) => { e.stopPropagation(); showNext(); });
 closeBtn.addEventListener("click", () => {
     modal.style.display = "none";
     modalContent.innerHTML = "";
+    document.body.style.overflow = "";
 });
 
 // Close modal on clicking outside content
@@ -70,5 +72,6 @@ modal.addEventListener("click", (e) => {
     if (e.target === modal) {
         modal.style.display = "none";
         modalContent.innerHTML = "";
+        document.body.style.overflow = "";
     }
 });
