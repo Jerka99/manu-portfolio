@@ -92,21 +92,17 @@ modal.addEventListener("touchstart", (e) => {
     startTime = Date.now();
 }, { passive: true });
 
-modal.addEventListener("touchmove", (e) => {
-    e.preventDefault();
-}, { passive: false });
-
 modal.addEventListener("touchend", (e) => {
     let endY = e.changedTouches[0].clientY;
     let diffY = startY - endY;
     let elapsed = Date.now() - startTime;
 
-    // only count as swipe if fast enough or long enough
-    if (Math.abs(diffY) > 50 && elapsed < 500) {
+    // More sensitive: lower distance threshold to 30px, allow up to 700ms swipe
+    if (Math.abs(diffY) > 30 && elapsed < 700) {
         if (diffY > 0) {
             showNext(); // swipe up → next
         } else {
-            showPrev(); // swipe down → prev
+            showPrev(); // swipe down → previous
         }
     }
 });
