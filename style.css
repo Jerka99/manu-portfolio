@@ -485,17 +485,19 @@ height:400px;
 }
 
 /* Initial positions */
-.slide-right img {
+.slide-right img, .slide-right video {
     transform: translateX(100%);
 }
 
-.slide-left img {
+.slide-left img, .slide-left video {
     transform: translateX(-100%);
 }
 
 /* Slide-in visible state */
 .slide-right.visible img,
-.slide-left.visible img {
+.slide-left.visible img,
+ .slide-right.visible video,
+ .slide-left.visible video{
     transform: translateX(0);
     opacity: 1;
 }

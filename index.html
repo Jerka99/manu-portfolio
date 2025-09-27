@@ -11,7 +11,7 @@
     <img class="hero-image" src="images/large-fullscreen/large3.jpg" alt="Hero Image">
     <div class="hero-content">
         <div class="header-title fade-in">
-            <h2 >Capturing Life's Beauty</h2>
+            <h2>Capturing Life's Beauty</h2>
             <p>Welcome to my photography world. Explore moments captured with passion and creativity.</p>
         </div>
     </div>
@@ -34,9 +34,9 @@
         </ul>
     </nav>
 
-<!--    <div id="intro" >-->
-<!--        <h1 class="fade-in">Welcome to My Portfolio</h1>-->
-<!--    </div>-->
+    <!--    <div id="intro" >-->
+    <!--        <h1 class="fade-in">Welcome to My Portfolio</h1>-->
+    <!--    </div>-->
     <!-- Large fullscreen images -->
     <section class="large-images fade-in">
         <div class="large-image media" data-type="image">
@@ -110,12 +110,7 @@
             </div>
             <div class="media fade-in-fast" data-type="image">
                 <img loading="lazy" src="images/nature/nature5H.jpg" alt="Photo 4">
-                <!--                <video src="images/nature/nature5H.jpg" muted></video>-->
             </div>
-            <!--            <div class="media fade-in-fast" data-type="image">-->
-            <!--                <img loading="lazy" src="images/nature/carH.jpg" alt="Photo 4">-->
-            <!--                &lt;!&ndash;                <video src="images/nature/carH.jpg" muted></video>&ndash;&gt;-->
-            <!--            </div>-->
             <div class="media fade-in-fast" data-type="image">
                 <img loading="lazy" src="images/animals/bugV.jpg" alt="Photo 1">
             </div>
@@ -176,12 +171,9 @@
             </div>
             <div class="media fade-in-fast" data-type="image">
                 <img loading="lazy" src="images/black-and-white/gdH.jpg" alt="Photo 4">
-                <!--                <div class="media fade-in-fast" data-type="video">-->
-                <!--                <video src="images/nature/nature5H.jpg" muted></video>-->
             </div>
             <div class="media" data-type="image">
                 <img loading="lazy" src="images/black-and-white/kidV.jpg" alt="Photo 4">
-                <!--                <video src="images/nature/carH.jpg" muted></video>-->
             </div>
         </div>
         <div style="height:100vh"></div>
@@ -210,11 +202,9 @@
             </div>
             <div class="media fade-in-fast" data-type="image">
                 <img loading="lazy" src="images/people/ppl7.jpg" alt="Photo 4">
-                <!--                <video src="images/nature/nature5H.jpg" muted></video>-->
             </div>
             <div class="media" data-type="image">
                 <img loading="lazy" src="images/people/ppl8.jpg" alt="Photo 4">
-                <!--                <video src="images/nature/carH.jpg" muted></video>-->
             </div>
             <div class="media fade-in-fast" data-type="image">
                 <img loading="lazy" src="images/people/ppl1.jpg" alt="Photo 3">
@@ -233,9 +223,6 @@
     </section>
 
 
-    <!-- Parallax section -->
-    <section class="parallax"></section>
-
     <!-- Modal -->
     <div class="modal" id="modal">
         <span class="close" id="close">&times;</span>
@@ -243,18 +230,21 @@
     </div>
     <!-- Sliding images section -->
     <section class="sliding-images fade-in">
-        <div class="slide slide-right">
-            <img loading="lazy" src="https://picsum.photos/id/1060/1200/800" alt="Slide 1">
+        <div class="media slide slide-right" data-type="video">
+            <video src="videos/bepo.mp4" muted autoplay playsinline></video>
         </div>
-        <div class="slide slide-left">
-            <img loading="lazy" class="media" src="https://picsum.photos/id/1062/1200/800" alt="Slide 2">
+        <div class="media slide slide-left" data-type="video">
+            <video src="videos/sequence2.mp4" muted autoplay playsinline></video>
         </div>
-        <div class="slide slide-right">
-            <img loading="lazy" class="media" src="https://picsum.photos/id/1064/1200/800" alt="Slide 3">
+        <div class="media slide right" style="max-width:400px" data-type="video">
+            <video src="videos/sequence3.mp4" muted autoplay playsinline></video>
         </div>
+        <div class="media slide right" style="max-width:400px" data-type="video">
+            <video src="videos/sequence4.mp4" muted autoplay playsinline></video>
+        </div>
+
     </section>
 
-    <!-- Scattered photos section -->
     <!-- Scattered Gallery Section -->
     <section class="scattered-gallery fade-in">
         <div class="scattered-image" style="top:10%; left:5%; z-index:2;">
@@ -280,10 +270,6 @@
         </div>
     </section>
 
-    <section class="parallax-section">
-        <div class="parallax-background sea ">
-        </div>
-    </section>
 </main>
 <footer class="footer">
     <div class="footer-container">
@@ -324,5 +310,6 @@
 <script src="js/scrollAnimations.js"></script>
 <script src="js/floatingEffect.js"></script>
 <script src="js/scrollParallax.js"></script>
+<script src="js/video.js"></script>
 </body>
 </html>
