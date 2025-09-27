@@ -19,11 +19,14 @@
 
 <main>
     <nav class="portfolio-nav">
+        <div class="hamburger" onclick="document.querySelector('.portfolio-nav ul').classList.toggle('show')">
+            <span></span><span></span><span></span>
+        </div>
         <ul>
-            <li><a href="#concert">Concert</a></li>
-            <li><a href="#animals-nature">Animals & Nature</a></li>
-            <li><a href="#black-white">Black & White</a></li>
-            <li><a href="#people">People</a></li>
+            <li><a onclick="document.querySelector('.portfolio-nav ul').classList.toggle('show')" href="#concert">Concert</a></li>
+            <li><a onclick="document.querySelector('.portfolio-nav ul').classList.toggle('show')" href="#animals-nature">Animals & Nature</a></li>
+            <li><a onclick="document.querySelector('.portfolio-nav ul').classList.toggle('show')" href="#black-white">Black & White</a></li>
+            <li><a onclick="document.querySelector('.portfolio-nav ul').classList.toggle('show')" href="#people">People</a></li>
         </ul>
     </nav>
 
@@ -44,10 +47,10 @@
     </section>
 
 
-    <section id="concert" class="color-fade-parallax">
+    <section id="concert" class="color-fade-parallax fade-in-fast">
         <div class="image-wrapper media">
-            <img src="images/concert/concert11.jpg" class="img-base" alt="">
-            <img src="images/concert/concert12.jpg" class="img-color" alt="">
+            <img loading="lazy" src="images/concert/concert11.jpg" class="img-base" alt="">
+            <img loading="lazy" src="images/concert/concert12.jpg" class="img-color" alt="">
         </div>
         <div class="parallax-content-holder">
             <div class="image-title fade-in-fast">Muted colors blend with soft purple undertones, creating a moody
