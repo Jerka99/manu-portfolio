@@ -502,6 +502,23 @@ height:400px;
     opacity: 1;
 }
 
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* optional container max width */
+    margin: 0 auto;
+}
+
+.video-grid .media video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
 
 
 
