@@ -6,10 +6,6 @@
     font-family: 'Arial', sans-serif;
 }
 
-
-/* Header */
-/* Hero Section */
-/* Hero Section Full-width, Responsive */
 .hero {
     position: relative;
     width: 100%;
@@ -77,12 +73,13 @@ section {
     gap: 20px;
 }
 
+
+/*   javascript    */
 .media {
     cursor: pointer;
     overflow: hidden;
     border-radius: 10px;
     position: relative;
-    background: #000;
 }
 
 .media img,
@@ -98,19 +95,17 @@ section {
     transform: scale(1.05);
 }
 
-/* Large fullscreen images */
-.large-images {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
 
-.large-image img {
-    width: 100%;
-    max-height: 80vh;
-    object-fit: cover;
-    border-radius: 10px;
-}
+
+
+
+
+
+
+
+
+
+
 
 /* Parallax section */
 
@@ -122,8 +117,6 @@ section {
     gap: 400px;
 }
 
-
-/* Default: large screens (2000px and above) */
 .parallax-content-holder .fade-in img {
     width: 600px;
     height: auto;
@@ -136,9 +129,6 @@ section {
     width: 900px;
 }
 
-/* Smaller screens */
-
-
 section.color-fade-parallax {
     padding: 0;
     max-width: none;
@@ -149,6 +139,7 @@ section.color-fade-parallax {
   overflow: hidden;
   max-width: none;
 }
+
 .color-fade-parallax {
   position: relative;
 }
@@ -229,6 +220,15 @@ height:400px;
 }
 
 
+
+
+
+
+
+
+
+
+
 /* Modal */
 .modal {
     display: none;
@@ -252,16 +252,15 @@ height:400px;
 
 .modal img,
 .modal video {
-    width: 60vw;        /* fixed width for all */
-    height: auto;       /* keep proportions */
-    max-height: 80vh;   /* don't get taller than viewport */
+    width: 60vw;
+    height: auto;
+    max-height: 80vh;
     border-radius: 10px;
     display: block;
     margin: 0 auto;
-    object-fit: contain; /* ensures it scales neatly */
+    object-fit: contain;
 }
 
-/* Modal overlay */
 .modal {
     display: none;
     position: fixed;
@@ -276,10 +275,9 @@ height:400px;
     overflow: hidden;
 }
 
-/* Navigation buttons */
 .nav {
-    position: fixed; /* fixed so always stays in same place */
-    top: 50%;        /* vertically centered */
+    position: fixed;
+    top: 50%;
     transform: translateY(-50%);
     font-size: 50px;
     color: #fff;
@@ -303,10 +301,9 @@ height:400px;
     color: #ddd;
 }
 
-/* Close button */
 .close {
-    position: fixed;  /* fixed so always visible */
-    top: 30px;        /* a bit lower from top */
+    position: fixed;
+    top: 30px;
     right: 30px;
     font-size: 40px;
     color: #fff;
@@ -352,7 +349,7 @@ height:400px;
 }
 
 .slide img {
-    width: 66vw; /* 2/3 of viewport width */
+    width: 66vw;
     max-width: 1200px;
     border-radius: 10px;
     transform: translateX(0);
@@ -418,70 +415,10 @@ height:400px;
 }
 
 
-/* Modal Styles */
-.scattered-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.9);
-    justify-content: center;
-    align-items: center;
-    z-index: 3000;
-}
-
-.scattered-modal .modal-image {
-    max-width: 90vw;
-    max-height: 80vh;
-    border-radius: 10px;
-}
-
-.scattered-modal .close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 40px;
-    color: #fff;
-    cursor: pointer;
-    z-index: 3100;
-}
-
-.scattered-modal .nav {
-    position: absolute;
-    top: 50%;
-    font-size: 50px;
-    color: #fff;
-    cursor: pointer;
-    user-select: none;
-    z-index: 3100;
-    transform: translateY(-50%);
-}
-
-.scattered-modal .nav.left { left: 20px; }
-.scattered-modal .nav.right { right: 20px; }
 
 
 
-/* Floating images */
-.floating-image {
-    width: 250px;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-    position: absolute;
-}
 
-/* Positions */
-.top-left {
-    top: 20px;
-    left: 20px;
-}
-
-.bottom-right {
-    bottom: 20px;
-    right: 20px;
-}
 
 @media (max-width: 500px) {
     .top-left {
