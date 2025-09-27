@@ -186,7 +186,6 @@ display:flex;
 }
 
 .img-base {
-  filter: grayscale(100%);
   z-index: 1;
 }
 
