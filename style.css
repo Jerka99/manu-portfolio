@@ -94,7 +94,6 @@ section.gallery {
 
 
 
-
 /*   javascript    */
 .media {
     cursor: pointer;
@@ -461,21 +460,6 @@ height:400px;
 
 
 
-@media (max-width: 500px) {
-    .top-left {
-        top: 10px;
-        left: 10px;
-    }
-    .bottom-right {
-        bottom: 10px;
-        right: 10px;
-    }
-
-    .floating-image {
-        width: 150px; /* smaller on mobile */
-    }
-}
-
 
 
 
@@ -538,6 +522,10 @@ height:400px;
   .grid {
     column-count: 2;
   }
+
+.gallery img[src="images/scatter-images/scatter5.jpg"] {
+  width:200%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -585,4 +573,19 @@ height:400px;
         column-count: 1;
       }
     /* }*/
+}
+
+@media (max-width: 500px) {
+    .top-left {
+        top: 10px;
+        left: 10px;
+    }
+    .bottom-right {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .floating-image {
+        width: 150px; /* smaller on mobile */
+    }
 }
