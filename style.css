@@ -188,15 +188,9 @@ section.color-fade-parallax {
 
 .img-color {
   z-index: 2;
-  opacity: 1;
-}
-
-.img-color::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, black var(--reveal, 0%), transparent 100%);
-  pointer-events: none;
+  mask-image: linear-gradient(to top, black 0%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, black 0%, transparent 100%);
+  opacity: 0;
 }
 
 
