@@ -71,7 +71,7 @@ section {
   column-count: 3;   /* default: desktop */
   column-gap: 20px;
     padding: 4rem 2rem;
-    max-width: 1200px;
+    max-width: 1600px;
     margin:auto;
 }
 
