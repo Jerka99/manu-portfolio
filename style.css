@@ -596,9 +596,8 @@ height:400px;
 .modal-content img,
 .modal-content video {
     width: auto;            /* let aspect ratio decide width */
-    max-width: 90vw;        /* fit within viewport */
+    max-width: 100%;        /* fit within viewport */
     height: auto;           /* scale height accordingly */
-    max-height: 90vh;       /* don't exceed viewport height */
     object-fit: contain;    /* keep full image visible */
     border-radius: 10px;
     display: block;
@@ -703,6 +702,9 @@ height: fit-content;
 }
 
 @media (max-width: 768px) {
+.parallax-content-holder .fade-in-fast img {
+    width: 100% !important;
+}
 
 .portfolio-nav {
     justify-content: flex-end;
@@ -778,11 +780,7 @@ height: fit-content;
     width: 90vw;
 }
 
-    .modal img,
-    .modal video {
-        width:100vw;
-        border-radius: 10px;
-    }
+
 
     .fade-in.left{
       justify-content: center;
