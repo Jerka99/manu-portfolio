@@ -13,6 +13,22 @@
     overflow: hidden;
 }
 
+#intro {
+    padding: 4rem;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    opacity: 1;
+    transition: opacity 1s ease;
+    z-index: 1000;
+}
+
+
 .hero-image {
     position: absolute;
     top: 0;
@@ -39,7 +55,7 @@
     width: 48vw;
     font-size: 21px;
     margin: 3vw;
-    opacity: 0.5;
+    opacity: 0.5 !important;
     max-width:500px;
 }
 
@@ -576,6 +592,18 @@ height:400px;
 }
 
 
+/* Modal content media */
+.modal-content img,
+.modal-content video {
+    width: auto;            /* let aspect ratio decide width */
+    max-width: 90vw;        /* fit within viewport */
+    height: auto;           /* scale height accordingly */
+    max-height: 90vh;       /* don't exceed viewport height */
+    object-fit: contain;    /* keep full image visible */
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
 
 
 

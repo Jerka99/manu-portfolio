@@ -12,3 +12,14 @@ window.addEventListener('scroll', () => {
 
   overlayBg.style.opacity = progress;
 });
+
+
+window.addEventListener("scroll", function() {
+  const intro = document.getElementById("intro");
+  if (window.scrollY > 50) { // user scrolled down 50px
+    intro.style.opacity = 0;
+    setTimeout(() => {
+      intro.style.display = "none"; // remove from DOM flow
+    }, 1000);
+  }
+});
