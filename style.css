@@ -124,7 +124,7 @@ section {
 
 
 /* Default: large screens (2000px and above) */
-.parallax-content-holder .slide img {
+.parallax-content-holder .fade-in img {
     width: 600px;
     height: auto;
     display: block;
@@ -132,7 +132,7 @@ section {
     box-shadow: 0px 0px 38px rgb(0 0 0 / 58%);
 }
 
-.parallax-content-holder .slide:nth-child(n+3) img {
+.parallax-content-holder .fade-in:nth-child(n+3) img {
     width: 900px;
 }
 
@@ -153,7 +153,17 @@ section.color-fade-parallax {
   position: relative;
 }
 
-.parallax-content-holder .slide img{
+.fade-in.left{
+display:flex;
+  justify-content: flex-end;
+}
+
+.fade-in.right{
+display:flex;
+  justify-content: flex-start;
+}
+
+.parallax-content-holder .fade-in img{
   background: black;
 }
 
@@ -529,6 +539,25 @@ height:400px;
     z-index: 2100;
 }
 
+    @media (max-width: 1600px) {
+       .parallax-content-holder .fade-in img {
+         width: 350px;
+       }
+.parallax-content-holder .fade-in:nth-child(n+3) img {
+    width: 500px;
+}
+     }
+
+     @media (max-width: 1200px) {
+       .parallax-content-holder .fade-in img {
+         width: 400px;
+       }
+.parallax-content-holder .fade-in:nth-child(n+3) img {
+    width: 600px;
+}
+     }
+
+
 @media (max-width: 768px) {
     .hero-content {
         position: absolute;
@@ -551,7 +580,7 @@ height:400px;
          .parallax-content img {
              width: 90vw; /* make responsive on mobile */
            }
-.parallax-content-holder .slide:nth-child(n+3) img {
+.parallax-content-holder .fade-in:nth-child(n+3) img {
     width: 90vw;
 }
 
@@ -560,23 +589,12 @@ height:400px;
         width:100vw;
         border-radius: 10px;
     }
-}
-    @media (max-width: 1600px) {
-       .parallax-content-holder .slide img {
-         width: 350px;
-       }
-.parallax-content-holder .slide:nth-child(n+3) img {
-    width: 500px;
-}
-     }
 
-     @media (max-width: 1200px) {
-       .parallax-content-holder .slide img {
-         width: 400px;
-       }
-.parallax-content-holder .slide:nth-child(n+3) img {
-    width: 600px;
+    .fade-in.left{
+      justify-content: center;
+    }
+
+    .fade-in.right{
+      justify-content: center;
+    }
 }
-     }
-
-
