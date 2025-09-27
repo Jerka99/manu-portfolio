@@ -2,7 +2,6 @@
 const modal = document.getElementById("modal");
 const modalContent = document.getElementById("modal-content");
 const closeBtn = document.getElementById("close");
-let startY = 0;
 
 // Collect all clickable media (gallery + scattered images)
 const mediaItems = document.querySelectorAll(".media img, .media video, .scattered-image img");
@@ -85,20 +84,29 @@ document.addEventListener("keydown", (e) => {
     }
 });
 
+let startY = 0;
+let startTime = 0;
+
 modal.addEventListener("touchstart", (e) => {
     startY = e.touches[0].clientY;
+    startTime = Date.now();
 }, { passive: true });
+
+modal.addEventListener("touchmove", (e) => {
+    e.preventDefault();
+}, { passive: false });
 
 modal.addEventListener("touchend", (e) => {
     let endY = e.changedTouches[0].clientY;
     let diffY = startY - endY;
+    let elapsed = Date.now() - startTime;
 
-    if (Math.abs(diffY) > 50) {
+    // only count as swipe if fast enough or long enough
+    if (Math.abs(diffY) > 50 && elapsed < 500) {
         if (diffY > 0) {
-            showNext();
+            showNext(); // swipe up → next
         } else {
-            showPrev();
+            showPrev(); // swipe down → prev
         }
     }
 });
-
