@@ -163,6 +163,10 @@ section.color-fade-parallax {
   position: relative;
 }
 
+.color-fade-parallax .parallax-content img{
+  background: black;
+}
+
 .image-wrapper {
   position: sticky;
   top: 0;
@@ -535,7 +539,7 @@ height:400px;
     z-index: 2100;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .hero-content {
         position: absolute;
         top: 32%;
