@@ -47,7 +47,7 @@
     </section>
 
 
-    <section id="concert" class="color-fade-parallax fade-in-fast">
+    <section id="concert" class="color-fade-parallax">
         <div class="image-wrapper media">
             <img src="images/concert/concert11.jpg" class="img-base" alt="">
             <img src="images/concert/concert12.jpg" class="img-color" alt="">
@@ -56,25 +56,25 @@
             <div class="image-title fade-in-fast">Muted colors blend with soft purple undertones, creating a moody
                 atmosphere that emphasizes expression and movement over the spectacle.
             </div>
-            <div class="fade-in left media">
+            <div class="fade-in-fast left media">
                 <img loading="lazy" src="images/concert/concert3.jpg" alt="Photo 1">
             </div>
-            <div class="fade-in right media">
+            <div class="fade-in-fast right media">
                 <img loading="lazy" src="images/concert/concert4.jpg" alt="Photo 2">
             </div>
-            <div class="fade-in left media">
+            <div class="fade-in-fast left media">
                 <img loading="lazy" src="images/concert/concert1.jpg" alt="Photo 1">
             </div>
             <div class="image-title fade-in-fast">The vibrant colors of the lights pulse with the rhythm of the music,
                 capturing the energy of every beat and every movement on stage.
             </div>
-            <div class="fade-in right media">
+            <div class="fade-in-fast right media">
                 <img loading="lazy" src="images/concert/concert6.jpg" alt="Photo 1">
             </div>
-            <div class="fade-in left media">
+            <div class="fade-in-fast left media">
                 <img loading="lazy" src="images/concert/concert5.jpg" alt="Photo 1">
             </div>
-            <div class="fade-in right media">
+            <div class="fade-in-fast right media">
                 <img loading="lazy" src="images/concert/concert2.jpg" alt="Photo 2">
             </div>
             <div style="height:100vh"></div>
@@ -133,7 +133,10 @@
 
         <section style="padding:0;margin:0" id="black-white"></section>
         <div class="image-wrapper media">
-            <img src="images/black-and-white/bestH.jpg" class="img-base" alt="">
+            <picture>
+                <source media="(max-width: 768px)" srcset="images/black-and-white/bestV.jpg">
+                <img src="images/black-and-white/bestH.jpg" class="img-base" alt="">
+            </picture>
         </div>
         <div class="image-title fade-in-fast">Timeless Shades</div>
         <div class="image-paragraph fade-in-fast">Removing color draws attention to contrast, light, and emotion. These
@@ -141,7 +144,10 @@
         </div>
         <div class="grid">
             <div class="media fade-in-fast" data-type="image">
-                <img loading="lazy" src="images/black-and-white/bestV.jpg" alt="Photo 1">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="images/black-and-white/bestH.jpg">
+                    <img src="images/black-and-white/bestV.jpg" alt="">
+                </picture>
             </div>
             <div class="media fade-in-fast" data-type="image">
                 <img loading="lazy" src="images/black-and-white/bnw2H.jpg" alt="Photo 2">

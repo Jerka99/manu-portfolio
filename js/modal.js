@@ -2,6 +2,7 @@
 const modal = document.getElementById("modal");
 const modalContent = document.getElementById("modal-content");
 const closeBtn = document.getElementById("close");
+let startY = 0;
 
 // Collect all clickable media (gallery + scattered images)
 const mediaItems = document.querySelectorAll(".media img, .media video, .scattered-image img");
@@ -60,18 +61,44 @@ mediaItems.forEach((item, i) => {
 prevBtn.addEventListener("click", (e) => { e.stopPropagation(); showPrev(); });
 nextBtn.addEventListener("click", (e) => { e.stopPropagation(); showNext(); });
 
-// Close modal
-closeBtn.addEventListener("click", () => {
+function close(){
     modal.style.display = "none";
     modalContent.innerHTML = "";
     document.body.style.overflow = "";
+}
+
+// Close modal
+closeBtn.addEventListener("click", () => {
+    close()
 });
 
 // Close modal on clicking outside content
 modal.addEventListener("click", (e) => {
     if (e.target === modal) {
-        modal.style.display = "none";
-        modalContent.innerHTML = "";
-        document.body.style.overflow = "";
+    close()
     }
 });
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.style.display === "flex") {
+    close()
+    }
+});
+
+modal.addEventListener("touchstart", (e) => {
+    startY = e.touches[0].clientY;
+}, { passive: true });
+
+modal.addEventListener("touchend", (e) => {
+    let endY = e.changedTouches[0].clientY;
+    let diffY = startY - endY;
+
+    if (Math.abs(diffY) > 50) {
+        if (diffY > 0) {
+            showNext();
+        } else {
+            showPrev();
+        }
+    }
+});
+
