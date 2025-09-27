@@ -25,7 +25,8 @@ function showModal(index) {
 
     if (item.tagName === "IMG") {
         const img = document.createElement("img");
-        img.src = item.src;
+        // Use currentSrc to get the actual image displayed on screen
+        img.src = item.currentSrc || item.src;
         modalContent.appendChild(img);
     } else if (item.tagName === "VIDEO") {
         const video = document.createElement("video");
@@ -67,23 +68,19 @@ function close(){
 }
 
 // Close modal
-closeBtn.addEventListener("click", () => {
-    close()
-});
+closeBtn.addEventListener("click", close);
 
 // Close modal on clicking outside content
 modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
-    close()
-    }
+    if (e.target === modal) close();
 });
 
+// Close modal on ESC
 document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modal.style.display === "flex") {
-    close()
-    }
+    if (e.key === "Escape" && modal.style.display === "flex") close();
 });
 
+// Swipe detection for mobile
 let startX = 0;
 let startY = 0;
 let startTime = 0;
@@ -102,10 +99,11 @@ modal.addEventListener("touchend", (e) => {
     const diffY = endY - startY;
     const elapsed = Date.now() - startTime;
 
-    const minDistance = 30; // minimum horizontal swipe distance
-    const maxVertical = 50; // max allowed vertical movement
-    const maxTime = 700; // max time for a swipe
+    const minDistance = 30; // horizontal swipe distance
+    const maxVertical = 50; // allow small vertical movement
+    const maxTime = 700; // max swipe time
 
+    // horizontal swipe only
     if (Math.abs(diffX) > minDistance && Math.abs(diffY) < maxVertical && elapsed < maxTime) {
         if (diffX < 0) {
             showNext(); // swipe left → next
