@@ -148,21 +148,20 @@ section.gallery {
 
 /*   javascript    */
 .media {
-    cursor: pointer;
-    overflow: hidden;
     border-radius: 10px;
     position: relative;
 }
 
 .media img,
 .media video {
+    cursor: pointer;
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s, opacity 0.5s;
 }
 
-.media:hover img,
+.media img:hover,
 .media:hover video {
     transform: scale(1.05);
 }
