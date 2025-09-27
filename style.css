@@ -668,6 +668,12 @@ height:400px;
 .gallery img[src="images/scatter-images/scatter5.jpg"] {
   width:200%;
   }
+
+  .gallery img[src="images/black-and-white/bestH.jpg"] {
+    width:85%;
+    }
+
+
     .footer {
       padding: 4rem 2rem; /* taller footer on bigger screens */
     }
