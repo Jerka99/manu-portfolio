@@ -31,6 +31,8 @@
                 & White</a></li>
             <li><a onclick="document.querySelector('.portfolio-nav ul').classList.toggle('show')"
                    href="#people">People</a></li>
+            <li><a onclick="document.querySelector('.portfolio-nav ul').classList.toggle('show')"
+                   href="#videos">Videos</a></li>
         </ul>
     </nav>
 
@@ -90,7 +92,7 @@
 
     <section class="gallery">
         <section style="padding:0;margin:0" id="animals-nature"></section>
-        <div class="image-wrapper media fade-in-fast">
+        <div class="image-wrapper media">
             <img src="images/nature/bestH.jpg" class="img-base" alt="">
         </div>
         <div class="image-title fade-in-fast">From forests to backyards, nature in its purest form</div>
@@ -134,7 +136,7 @@
         <div style="height:100vh"></div>
 
         <section style="padding:0;margin:0" id="black-white"></section>
-        <div class="image-wrapper media fade-in-fast">
+        <div class="image-wrapper media">
             <picture>
                 <source media="(max-width: 768px)" srcset="images/black-and-white/bestV.jpg">
                 <img src="images/black-and-white/bestH.jpg" class="img-base" alt="">
@@ -179,7 +181,7 @@
         <div style="height:100vh"></div>
 
         <section style="padding:0;margin:0" id="people"></section>
-        <div class="image-wrapper media fade-in-fast">
+        <div class="image-wrapper media">
             <img src="images/people/ppl6.jpg" class="img-base" alt="">
         </div>
         <div class="image-title fade-in-fast">Faces, expressions, and fleeting moments that define us.</div>
@@ -229,12 +231,12 @@
         <div class="modal-content" id="modal-content"></div>
     </div>
     <!-- Sliding images section -->
-    <section class="sliding-images fade-in">
-        <div class="media slide slide-right" data-type="video">
-            <video src="videos/bepo.mp4" muted autoplay playsinline></video>
-        </div>
+    <section id="videos" class="sliding-videos fade-in">
         <div class="media slide slide-left" data-type="video">
             <video src="videos/sequence2.mp4" muted autoplay playsinline></video>
+        </div>
+        <div class="media slide slide-right" data-type="video">
+            <video src="videos/bepo.mp4" muted autoplay playsinline preload="none"></video>
         </div>
         <div class="video-grid">
             <div class="media" data-type="video">

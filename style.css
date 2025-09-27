@@ -457,7 +457,7 @@ height:400px;
 
 
 /* Sliding Images */
-.sliding-images {
+.sliding-videos {
     display: flex;
     flex-direction: column;
     gap: 60px;
