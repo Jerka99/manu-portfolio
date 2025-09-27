@@ -84,25 +84,33 @@ document.addEventListener("keydown", (e) => {
     }
 });
 
+let startX = 0;
 let startY = 0;
 let startTime = 0;
 
 modal.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
     startY = e.touches[0].clientY;
     startTime = Date.now();
 }, { passive: true });
 
 modal.addEventListener("touchend", (e) => {
-    let endY = e.changedTouches[0].clientY;
-    let diffY = startY - endY;
-    let elapsed = Date.now() - startTime;
+    const endX = e.changedTouches[0].clientX;
+    const endY = e.changedTouches[0].clientY;
 
-    // More sensitive: lower distance threshold to 30px, allow up to 700ms swipe
-    if (Math.abs(diffY) > 30 && elapsed < 700) {
-        if (diffY > 0) {
-            showNext(); // swipe up → next
+    const diffX = endX - startX;
+    const diffY = endY - startY;
+    const elapsed = Date.now() - startTime;
+
+    const minDistance = 30; // minimum horizontal swipe distance
+    const maxVertical = 50; // max allowed vertical movement
+    const maxTime = 700; // max time for a swipe
+
+    if (Math.abs(diffX) > minDistance && Math.abs(diffY) < maxVertical && elapsed < maxTime) {
+        if (diffX < 0) {
+            showNext(); // swipe left → next
         } else {
-            showPrev(); // swipe down → previous
+            showPrev(); // swipe right → previous
         }
     }
 });
