@@ -30,13 +30,18 @@
      left: 0;
      z-index: 2;
  }
+    .hero-content h2{
+    padding: 0px 0 10px;
+    font-size: 3rem;
+    }
 
 
 .header-title {
-    width: 33vw;
+    width: 48vw;
     font-size: 21px;
     margin: 3vw;
     opacity: 0.5;
+    max-width:500px;
 }
 
 
@@ -67,7 +72,8 @@ body {
     justify-content: center;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 0 20px;
+    align-items: center;
 }
 
 .portfolio-nav a {
@@ -478,6 +484,10 @@ height:400px;
 }
 
 .scattered-image {
+    cursor: pointer;
+    background: white;
+    border-radius: 17px;
+    padding: 5px;
     position: absolute;
     opacity: 0;
     transform: translateY(30px) rotate(0deg);
@@ -651,6 +661,13 @@ height:400px;
 }
 
 @media (max-width: 768px) {
+.hero-content h2 {
+    font-size: 2rem;
+}
+
+.hero-content p {
+    font-size: 1rem;
+}
   .footer-container {
     flex-direction: column;
     align-items: center;
