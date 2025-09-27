@@ -1,4 +1,4 @@
-const faders = document.querySelectorAll(".fade-in, .slide, .scattered-image");
+const faders = document.querySelectorAll(".fade-in, .fade-in-fast, .slide, .scattered-image");
 
 const appearOptions = {
     threshold: 0.1,
