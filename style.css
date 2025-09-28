@@ -23,12 +23,8 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 40px;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0px auto 0;
   align-items: center;
-}
-
-.about-text {
-  animation: fadeInUp 1s ease forwards;
 }
 
 .about-text h2 {
@@ -54,6 +50,7 @@
   line-height: 1.8;
   margin-bottom: 15px;
   color: #ccc;
+  text-align: justify;
 }
 
 .about-image {
@@ -72,21 +69,6 @@
 }
 
 
-
-
-/* Responsive */
-@media (max-width: 768px) {
-  .about-me .container {
-    flex-direction: column-reverse;
-    gap: 20px;
-  }
-  .about-text h2 {
-    font-size: 28px;
-  }
-}
-
-
-
 .hero-image {
     position: absolute;
     top: 0;
@@ -98,20 +80,20 @@
 }
 
 .hero-content {
-     position: absolute;
-     top: 0;
-     left: 0;
-     z-index: 2;
- }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; /* optional, centers multi-line text */
+}
     .hero-content h2{
     padding: 0px 0 10px;
-    font-size: 3rem;
+    font-size: 5rem;
     }
 
 
 .header-title {
-    width: 48vw;
-    font-size: 21px;
+    font-size: 2rem;
     margin: 3vw;
     opacity: 0.5 !important;
     max-width:500px;
@@ -184,7 +166,7 @@ body {
 section {
     padding: 4rem 2rem;
     max-width: 1200px;
-    margin: 0 auto 300px auto;
+    margin: 0 auto 0 auto;
 }
 
 .large-images .media{
@@ -194,7 +176,7 @@ section {
 
 /* Gallery Grid */
 .grid {
-  column-count: 3;   /* default: desktop */
+  column-count: 3;
   column-gap: 20px;
     padding: 4rem 2rem;
     max-width: 1600px;
@@ -324,14 +306,21 @@ display:flex;
 }
 
 .image-title {
-    padding: 4rem 2rem;
     transform: translateX(-50%);
     color: #fff;
-    font-size: 2rem;
+    font-size: 4rem;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
     opacity: 0;
     transition: opacity 0.3s ease-out;
+    text-align: center;
+    padding: 0 0 50px;
 }
+
+.image-title.fade-in-fast.visible {
+  opacity: 0.8; /* slightly transparent */
+  transform: translateY(0);
+}
+
 
 .image-paragraph {
     padding: 1rem 2rem;
@@ -515,10 +504,31 @@ height:400px;
 
 
 /* Sliding Images */
+#videos p{
+font-size: 32px;
+text-align: center;
+opacity: 0.8;
+}
+
+#videos .video-grid + p{
+text-align: center;
+}
+
+a {
+  color: #ffcc00d6;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ffcc00;
+}
+
+
 .sliding-videos {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 20px;
     padding: 4rem 2rem;
 }
 
@@ -672,10 +682,10 @@ height:400px;
 /* Modal content media */
 .modal-content img,
 .modal-content video {
-    width: auto;            /* let aspect ratio decide width */
-    max-width: 100%;        /* fit within viewport */
-    height: auto;           /* scale height accordingly */
-    object-fit: contain;    /* keep full image visible */
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
     border-radius: 10px;
     display: block;
     margin: 0 auto;
@@ -779,6 +789,19 @@ height: fit-content;
 }
 
 @media (max-width: 768px) {
+
+.image-title {
+    font-size: 2rem;
+}
+
+  .about-me .container {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+  .about-text h2 {
+    font-size: 28px;
+  }
+
 .parallax-content-holder .fade-in-fast img {
     width: 100% !important;
 }
@@ -812,12 +835,17 @@ height: fit-content;
     display: flex;
   }
 
-.hero-content h2 {
-    font-size: 2rem;
-}
+  .hero-content {
+      bottom: 0;
+      top: unset;
+  }
+
+    .hero-content h2 {
+        font-size: 70px;
+    }
 
 .hero-content p {
-    font-size: 1rem;
+    font-size: 30px;
 }
   .footer-container {
     flex-direction: column;
@@ -828,27 +856,11 @@ height: fit-content;
     justify-content: center;
   }
 
-    .hero-content {
-        position: absolute;
-        right: 8px;
-        top: unset;
-        left: unset;
-        bottom: 16%;
-        text-align: center;
-        border-radius: 8px;
-        padding: 1rem;
-    }
-
-    .header-title {
-         width:unset;
-    }
-
 .parallax-content {
     width: 100%;
     padding: 15vh 0;
     height: auto;
-    display: flex
-;
+    display: flex;
 }
          .parallax-content img {
              width: 90vw; /* make responsive on mobile */
@@ -882,9 +894,20 @@ height: fit-content;
         justify-content: center;
       }
 
+#videos p{
+font-size: 20px;
+}
+
+
 }
 
 @media (max-width: 500px) {
+    .hero-content h2 {
+        font-size: 50px;
+    }
+        .hero-content p {
+            font-size: 20px;
+        }
     .top-left {
         top: 10px;
         left: 10px;
