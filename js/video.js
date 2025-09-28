@@ -2,8 +2,8 @@ const videos = document.querySelectorAll(".media video");
 
 videos.forEach(video => {
     video.addEventListener("ended", () => {
-        video.currentTime = 0; // rewind
-        video.play();           // start again
+        video.currentTime = 0;
+        video.play();
     });
 });
 
@@ -12,16 +12,15 @@ const observer = new IntersectionObserver((entries) => {
     if(entry.isIntersecting){
       const video = entry.target;
       if(video.dataset.src){
-        video.src = video.dataset.src;   // load actual src
+        video.src = video.dataset.src;
         video.play();
-        observer.unobserve(video);       // stop observing once loaded
+        observer.unobserve(video);
       }
     }
   });
-}, { threshold: 0.5 }); // 50% visible
+}, { threshold: 0.5 });
 
 videos.forEach(video => {
-  video.dataset.src = video.src;  // move src to data-src
-  video.src = "";                 // remove initial src
+  video.dataset.src = video.src;
   observer.observe(video);
 });
