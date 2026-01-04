@@ -26,6 +26,6 @@ function imageLoaded() {
 
 function hideLoader() {
     const loader = document.getElementById('page-loader');
-//    loader.classList.add('hidden');
+    loader.classList.add('hidden');
     document.body.classList.remove('loading');
 }
