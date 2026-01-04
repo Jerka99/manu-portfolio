@@ -33,7 +33,7 @@ videos.forEach((video, index) => {
   video.dataset.src = video.src;
 
   // Choose initial frame (time in seconds)
-  const initialFrames = [2, 8, 0, 3, 12]; // seconds for each video
+  const initialFrames = [2, 8, 9.7, 0, 3, 12]; // seconds for each video
   const initialTime = initialFrames[index] || 0;
 
   // Wait for video metadata to load, then jump to initial frame
