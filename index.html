@@ -7,6 +7,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div id="page-loader">
+    <div id="camera-holder">
+        <img src="images/loading/camera.png">
+        <div class="lens-container">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="loader-percentage">0%</div>
+    </div>
+</div>
+
 <header class="hero">
     <img class="hero-image" src="images/large-fullscreen/large3.jpg" alt="Hero Image">
     <div class="hero-content">
@@ -33,7 +49,7 @@
             <li><a onclick="document.querySelector('.portfolio-nav ul').classList.toggle('show')" href="#black-white">Crno
                 i bijelo</a></li>
             <li><a onclick="document.querySelector('.portfolio-nav ul').classList.toggle('show')"
-                   href="#people">Ljudi</a></li>
+                   href="#people">Portreti</a></li>
             <li><a onclick="document.querySelector('.portfolio-nav ul').classList.toggle('show')"
                    href="#videos">Video</a></li>
         </ul>
@@ -195,7 +211,7 @@
         <div class="image-wrapper media">
             <img src="images/people/ppl6.jpg" class="img-base" alt="">
         </div>
-        <div class="image-title fade-in-fast">Ljudi</div>
+        <div class="image-title fade-in-fast">Portreti</div>
         <div class="grid">
             <div class="media fade-in-fast" data-type="image">
                 <img src="images/people/ppl2.jpg" alt="Photo 3">
@@ -243,13 +259,13 @@
         <div class="image-title fade-in-fast">Video</div>
 
         <div class="media slide slide-left" data-type="video">
-            <video src="videos/sequence2.mp4" muted autoplay playsinline></video>
+            <video src="videos/sequence2.mp4" muted></video>
         </div>
         <p class="fade-in-fast">Završni rad - TV emisija V FAKTOR - dizajn svijetla i glavna kamera</p>
         <div style="height: 130px"></div>
 
         <div class="media slide slide-right" data-type="video">
-            <video src="videos/bepo.mp4" muted autoplay playsinline preload="none"></video>
+            <video src="videos/bepo.mp4" muted></video>
         </div>
         <p class="fade-in-fast">
             Režija, snimanje i montaža glazbenog spota
@@ -261,13 +277,13 @@
 
         <div class="video-grid">
             <div class="media" data-type="video">
-                <video src="videos/sequence3.mp4" muted autoplay playsinline></video>
+                <video src="videos/sequence3.mp4" muted></video>
             </div>
             <div class="media" data-type="video">
-                <video src="videos/sequence4.mp4" muted autoplay playsinline></video>
+                <video src="videos/sequence4.mp4" muted ></video>
             </div>
             <div class="media" data-type="video">
-                <video src="videos/sequence5.mp4" muted autoplay playsinline></video>
+                <video src="videos/sequence5.mp4" muted ></video>
             </div>
         </div>
         <p class="fade-in-fast">
@@ -313,7 +329,8 @@
             <p>Kontaktirajte me preko Gmail-a i Instagrama</p>
         </div>
         <div class="footer-contact">
-            <a href="https://www.instagram.com/momento_stop_photo?igsh=MTFvMW01ZWNzczdxNw==" target="_blank" aria-label="Instagram">
+            <a href="https://www.instagram.com/momento_stop_photo?igsh=MTFvMW01ZWNzczdxNw==" target="_blank"
+               aria-label="Instagram">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="32" height="32"
                      fill="currentColor">
                     <path d="M224.1 141c-63.6 0-115 51.4-115 115s51.4 115 115 115 115-51.4 115-115-51.4-115-115-115zm0 190c-41.3 0-75-33.7-75-75s33.7-75 75-75 75 33.7 75 75-33.7 75-75 75zm146.4-194.1c0 14.9-12 26.9-26.9 26.9s-26.9-12-26.9-26.9 12-26.9 26.9-26.9 26.9 12 26.9 26.9zm76.1 27.2c-1.7-35.3-9.9-66.7-36.1-92.9s-57.6-34.4-92.9-36.1c-36.5-2.1-146-2.1-182.5 0-35.3 1.7-66.7 9.9-92.9 36.1S1.7 128.3 0 163.6c-2.1 36.5-2.1 146 0 182.5 1.7 35.3 9.9 66.7 36.1 92.9s57.6 34.4 92.9 36.1c36.5 2.1 146 2.1 182.5 0 35.3-1.7 66.7-9.9 92.9-36.1s34.4-57.6 36.1-92.9c2.1-36.5 2.1-146 0-182.5zM398.8 388c-7.8 19.5-22.9 34.6-42.4 42.4-29.4 11.7-99.3 9-132.4 9s-103 .3-132.4-9c-19.5-7.8-34.6-22.9-42.4-42.4-11.7-29.4-9-99.3-9-132.4s-.3-103 9-132.4c7.8-19.5 22.9-34.6 42.4-42.4 29.4-11.7 99.3-9 132.4-9s103-.3 132.4 9c19.5 7.8 34.6 22.9 42.4 42.4 11.7 29.4 9 99.3 9 132.4s.3 103-9 132.4z"/>
@@ -330,11 +347,10 @@
     </div>
     <p class="footer-copy">&copy; 2025 Manuela Barrio Saavedra. All rights reserved.</p>
 </footer>
-
 <script src="js/modal.js"></script>
 <script src="js/scrollAnimations.js"></script>
-<!--<script src="js/floatingEffect.js"></script>-->
 <script src="js/scrollParallax.js"></script>
 <script src="js/video.js"></script>
+<script src="js/loading.js"></script>
 </body>
 </html>
