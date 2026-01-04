@@ -1,5 +1,3 @@
-document.body.classList.add('loading');
-
 const images = Array.from(document.querySelectorAll('.hero-image, .img-base, .img-color'));
 let loadedCount = 0;
 

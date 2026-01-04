@@ -111,6 +111,9 @@ body {
     background: linear-gradient(135deg, #111 0%, #1a1a1a 50%, #222 100%);
 }
 
+body.loading {
+  overflow: hidden;
+}
 
 .portfolio-nav {
   position: sticky;
