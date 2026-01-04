@@ -733,6 +733,18 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  height: 27vmin;
+}
+
+#image-and-paragraph p {
+    font-size: 22px;
+}
+
+#image-and-paragraph {
+display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 @keyframes movePercentage {
@@ -1013,6 +1025,10 @@ font-size: 20px;
     .floating-image {
         width: 150px;
     }
+
+#camera-holder{
+  height: 39vmin;
+}
 
     #page-loader img{
         width: 60vmin;
