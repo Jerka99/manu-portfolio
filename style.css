@@ -731,33 +731,31 @@ a:hover {
     visibility: hidden;
 }
 
-#camera-holder{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  height: 27vmin;
-}
-
-#image-and-paragraph p {
+#camera-and-paragraph p {
     font-size: 22px;
 }
 
-#image-and-paragraph {
+#camera-and-paragraph {
 display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 @keyframes movePercentage {
-    from { transform: scale(1.5); }
-    to   { transform: scale(0.7); }
+    from { transform: scale(1.2); }
+    to   { transform: scale(0.4); }
 }
 
 #loader-percentage {
     position: absolute;
     animation: movePercentage 2s infinite alternate ease-in-out;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -766,17 +764,18 @@ display: flex;
 }
 
 .lens-container {
-    margin-left: 1px;
-    margin-top: 2px;
     position: absolute;
-    -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    background-size: 25%;
-    background-position: center center;
-    width: 14vmin;
-    height: 14vmin;
+    z-index: 2;
+    /* height: 65%; */
+    width: 48%;
+    aspect-ratio: 1;
+    left: 50%;
+    transform: translate(-50%, 26%);
     border-radius: 50%;
+    background: black;
     overflow: hidden;
+    border: 7px solid black;
 }
 
 .lens-container div {
@@ -810,6 +809,113 @@ display: flex;
 .lens-container div:nth-child(6) { animation: move6 2s infinite alternate ease-in-out; }
 .lens-container div:nth-child(7) { animation: move7 2s infinite alternate ease-in-out; }
 
+
+#camera {
+    width: 100%;
+    height: 100%;
+    background: #ff000061;
+    position: absolute;
+    z-index: 9999;
+    padding: 12px 32px 28px;
+}
+
+#camera-block {
+    position: relative;
+    width: 32vmin;
+    aspect-ratio: 318 / 218;
+    margin-bottom: 15px;
+}
+
+#camera-block::after {
+    content: "";
+    width: 100%;
+      background: white;
+    display: block;
+    height: 82%;
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    border-radius: 10%;
+}
+
+#camera-block::before {
+     content: "";
+     clip-path: polygon(27% 29%, 69% 27%, 95% 50%, 5% 50%);
+     background: white;
+     display: block;
+     height: 9%;
+     top: 14%;
+     position: absolute;
+     left: 0;
+     right: 0;
+     border-radius: 10%;
+ }
+
+#top-element-main {
+    clip-path: polygon(36% 17%, 64% 17%, 68% 58%, 32% 58%);
+    height: 30%;
+    clip-path: polygon(39% 3%, 61% 3%, 64% 17%, 68% 58%, 32% 58%, 36% 17%);
+    background: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+#top-element-main {
+    clip-path: polygon(36% 17%, 64% 17%, 68% 58%, 32% 58%);
+    height: 30%;
+    clip-path: polygon(39% 3%, 61% 3%, 64% 17%, 68% 58%, 32% 58%, 36% 17%);
+    background: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+#top-element-button {
+    position: absolute;
+    left: 7.5%;
+    top: 10%;
+    width: 16%;
+    height: 5%;
+    transform: rotate(-1.5deg);
+    overflow: hidden;
+}
+
+#top-element-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 160%;               /* intentionally wider ellipse */
+  height: 100%;
+  background: white;
+  transform: translateX(-50%);
+  clip-path: ellipse(50% 50% at 50% 50%);
+}
+
+
+#top-element-angle-1 {
+    width: 5%;
+    height: 5%;
+    background: white;
+    top: 2.2%;
+    left: 35.6%;
+    position: absolute;
+    border-radius: 36%;
+    transform: rotate(124deg);
+}
+#top-element-angle-2 {
+    width: 5%;
+    height: 5%;
+    background: white;
+    top: 2.2%;
+    right: 35.6%;
+    position: absolute;
+    border-radius: 36%;
+    transform: rotate(236deg);
+}
 
 @media (min-width: 992px) {
   .footer {
@@ -1005,7 +1111,15 @@ height: fit-content;
 #videos p{
 font-size: 20px;
 }
+    #camera-block {
+        width: 45vmin;
+    }
 
+
+    @keyframes movePercentage {
+        from { transform: scale(0.8); }
+        to   { transform: scale(0.4); }
+    }
 
 }
 
@@ -1029,16 +1143,7 @@ font-size: 20px;
         width: 150px;
     }
 
-#camera-holder{
-  height: 39vmin;
-}
-
-    #page-loader img{
-        width: 60vmin;
-    }
-
-    .lens-container {
-        width: 21vmin;
-        height: 21vmin;
-    }
+        .lens-container {
+            border: 5px solid black;
+        }
 }
