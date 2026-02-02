@@ -16,8 +16,7 @@ const observer = new IntersectionObserver((entries) => {
 
       if (video.dataset.src) {
         video.src = video.dataset.src;
-
-        // Play when ready
+        video.load();
         video.play().catch(() => {
           console.log("Autoplay blocked, ensure muted");
         });
@@ -28,19 +27,10 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.5 });
 
-// Set data-src and initial frame from video
-videos.forEach((video, index) => {
+// Set data-src and observe for lazy loading
+videos.forEach((video) => {
   video.dataset.src = video.src;
-
-  // Choose initial frame (time in seconds)
-  const initialFrames = [2, 8, 10.3, 0, 3, 12]; // seconds for each video
-  const initialTime = initialFrames[index] || 0;
-
-  // Wait for video metadata to load, then jump to initial frame
-  video.addEventListener("loadedmetadata", () => {
-    video.currentTime = initialTime;
-    video.pause(); // keep paused until in view
-  });
-
+  video.muted = true;
+  video.playsInline = true;
   observer.observe(video);
 });
