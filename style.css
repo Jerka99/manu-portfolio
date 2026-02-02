@@ -692,6 +692,7 @@ a:hover {
     border-radius: 10px;
     display: block;
     margin: 0 auto;
+    touch-action: pinch-zoom;
 }
 
 
