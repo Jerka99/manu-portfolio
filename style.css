@@ -918,6 +918,11 @@ display: flex;
     transform: rotate(236deg);
 }
 
+.extra-image{
+display: none;
+}
+
+
 @media (min-width: 992px) {
   .footer {
     padding: 6rem 2rem; /* taller footer for large screens */
@@ -1004,6 +1009,14 @@ height: fit-content;
 }
 
 @media (max-width: 768px) {
+
+.extra-image{
+    display: block;
+}
+
+.first-image{
+display: none;
+}
 
 .image-title {
     font-size: 2rem;
