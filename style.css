@@ -6,6 +6,10 @@
     font-family: 'Arial', sans-serif;
 }
 
+html, body {
+    background-color: #111;
+}
+
 .hero {
     position: relative;
     width: 100%;
@@ -104,6 +108,8 @@
 body {
     margin: 0;
     padding: 0;
+    background: #111;
+    background: linear-gradient(135deg, #111 0%, #1a1a1a 50%, #222 100%);
     font-family: 'Arial', sans-serif;
     background-attachment: fixed;
     background-size: cover;
@@ -551,7 +557,8 @@ a:hover {
     max-width: 1200px;
     border-radius: 10px;
     transform: translateX(0);
-    transition: transform 1s ease-out, opacity 1s ease-out;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+                opacity 0.6s ease-out;
     opacity: 0;
 }
 
