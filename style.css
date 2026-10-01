@@ -929,6 +929,10 @@ display: flex;
 display: none;
 }
 
+#nea{
+    width: 48%;
+    margin: auto;
+}
 
 @media (min-width: 992px) {
   .footer {
@@ -1016,6 +1020,10 @@ height: fit-content;
 }
 
 @media (max-width: 768px) {
+
+#nea{
+        width: auto;
+}
 
 .extra-image{
     display: block;
